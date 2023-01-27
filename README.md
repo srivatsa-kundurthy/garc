@@ -1,6 +1,7 @@
 garc: Python and Command-Line Interface for Gab.com API
 =====
 
+
 Garc is a python library and command line tool for collecting JSON data from Gab.com. In July 2019, Gab switched its platform to a fork of Mastodon, this package was origionally written prior to this switch, but has been updated to work as well as possible with the new functionality of Mastodon.
 
 Garc is built based on the wonderful [twarc](https://github.com/DocNow/twarc) project published by the Documenting the Now project. Inspiration for structure, usage and outputs are from twarc, and garc is intended to be used for similar purposes.
@@ -21,10 +22,8 @@ Please be respectful when using this and any data collection software, try not t
 
 There are two options for installing garc. 
 
-1. From pypi the official python package repository, which will always have the most stable release:
-    `pip install garc`
-2. Directly from Github, which will have the newest release:
-    `pip install git+git://github.com/ChrisStevens/garc.git`
+1. Directly from Github, which will have the newest release:
+    `pip install git+https://github.com/srivatsa-kundurthy/garc.git`
 
 
 ## Usage
