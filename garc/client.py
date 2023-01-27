@@ -350,7 +350,9 @@ class Garc(object):
         config = configparser.ConfigParser()
         config.read(self.config)
         if 'headers' not in config.sections():
-            user_agent = 'garc'
+            #user_agent = 'garc'
+            user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+
         else:
             user_agent = config.get('headers','user_agent')
 
@@ -419,7 +421,9 @@ class Garc(object):
             return
         config = configparser.ConfigParser()
         config.read(self.config)
-        config.add_section(self.profile)
+        #config.add_section(self.profile)
+        if not config.has_section(self.profile):
+            config.add_section(self.profile)
         config.set(self.profile, 'user_account', self.user_account)
         config.set(self.profile, 'user_password', self.user_password)
         with open(self.config, 'w') as config_file:
